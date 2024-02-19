@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { MatSidenav } from '@angular/material/sidenav';
-import { pluck } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -14,27 +13,12 @@ export class AppComponent {
   constructor(private breakpointObserver: BreakpointObserver) {
   }
 
-
-  // ngAfterContentInit(): void {
-//   this.breakpointObserver.observe(['(max-width: 800px)']).subscribe({
-//     next: res => {
-//       if (res.matches) {
-//         this.isSmallScreen = true;
-//       } else {
-//         this.isSmallScreen = false;
-//       }
-//     }
-//   })
-// }
-
   ngAfterContentInit(): void {
-    this.breakpointObserver.observe(['(max-width: 800px)'])
-      .pipe(
-        pluck('matches')
-      )
-      .subscribe(res => this.isSmallScreen = res);
-  }
+    this.breakpointObserver
+      .observe(['(max-width: 800px)'])
+      .subscribe(res => this.isSmallScreen = res.matches);
 
+  }
 
 
   get sidenavMode() {
