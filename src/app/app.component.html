@@ -1,9 +1,9 @@
 <mat-sidenav-container>
   <mat-sidenav
     #sidenav
-    opened
+    [opened]="!isSmallScreen"
     [fixedInViewport]="true"
-    mode="push"
+    [mode]="sidenavMode"
   >
     My dynamic menu
   </mat-sidenav>
