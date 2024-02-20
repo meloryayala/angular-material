@@ -2,8 +2,16 @@
   flex: 1 1 auto;
 }
 
+.container {
+  height: 100vh;
+}
+
 .title {
   margin-bottom: 500px;
+}
+
+.sidenav {
+  width: 200px;
 }
 
 .toolbar-menu {
