@@ -20,6 +20,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TabsComponent } from './tabs/tabs.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     ButtonIconsComponent,
     FormFieldsComponent,
     ProgressSpinnerComponent,
-    TabsComponent
+    TabsComponent,
+    DatepickerComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatListModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
   providers: [{
