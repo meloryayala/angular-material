@@ -13,29 +13,44 @@ import { ButtonIconsComponent } from './button-icons/button-icons.component';
 import { FormFieldsComponent } from './form-fields/form-fields.component';
 import { MatInputModule } from '@angular/material/input';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatListModule } from '@angular/material/list';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { TabsComponent } from './tabs/tabs.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonIconsComponent,
-    FormFieldsComponent
+    FormFieldsComponent,
+    ProgressSpinnerComponent,
+    TabsComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatSliderModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatInputModule
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatInputModule,
+    FormsModule,
+    MatListModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatTabsModule
 
-    ],
+  ],
   providers: [{
     provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-    useValue: { appearance: 'outline', floatLabel: 'always'}
+    useValue: { appearance: 'outline', floatLabel: 'always' }
   }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

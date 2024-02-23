@@ -1,0 +1,46 @@
+<h1>Simple tabs</h1>
+<mat-tab-group
+  mat-stretch-tabs="false"
+  mat-align-tabs="start"
+ animationDuration="3000">
+  <mat-tab label="Tab name">Content</mat-tab>
+  <mat-tab label="Tab name">
+    <ng-template mat-tab-label>
+      <mat-icon>settings</mat-icon>
+      Tab name
+    </ng-template>
+    Content
+  </mat-tab>
+  <mat-tab label="Tab name">
+    <ng-template mat-tab-label>
+      <mat-icon>person</mat-icon>
+      Tab name
+    </ng-template>
+    Content
+  </mat-tab>
+</mat-tab-group>
+<br><br>
+
+<h1>Tabs stretch</h1>
+<mat-tab-group
+  animationDuration="300"
+class="mat-elevation-z4"
+headerPosition="below"
+color="accent"
+backgroundColor="primary">
+  <mat-tab label="Tab name">
+    <ng-template mat-tab-label>
+      <mat-icon>settings</mat-icon>
+      Tab name
+    </ng-template>
+    Content
+  </mat-tab>
+  <mat-tab label="Tab name">
+    <ng-template mat-tab-label>
+      <mat-icon>person</mat-icon>
+      Tab name
+    </ng-template>
+    <h3>Person</h3>
+    <p>Text</p>
+  </mat-tab>
+</mat-tab-group>

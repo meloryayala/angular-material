@@ -1,20 +1,30 @@
 <div>
   <h1>Inputs</h1>
-  <mat-form-field floatLabel="always" >
+  <mat-form-field floatLabel="always">
     <input type="text" matInput placeholder="Name">
   </mat-form-field>
-
-  <mat-form-field >
+  <mat-form-field>
     <input type="text" matInput placeholder="Name">
   </mat-form-field>
   <br><br>
 
-  <mat-form-field >
+  <mat-form-field>
     <mat-label>Name</mat-label>
     <input type="text" matInput placeholder="Name">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
   </mat-form-field>
-  <mat-form-field >
+  <mat-form-field>
     <mat-label>Name</mat-label>
-    <input type="text" matInput placeholder="Name">
+    <input matInput type="text" placeholder="Name" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input #username matInput type="text" placeholder="Name" [(ngModel)]="value" maxlength="10">
+    <mat-hint align="start">Max. {{ username.maxLength}} characters</mat-hint>
+    <mat-hint align="end">{{username.value.length}}/{{username.maxLength}}</mat-hint>
   </mat-form-field>
 </div>

@@ -6,7 +6,13 @@
     [fixedInViewport]="true"
     [mode]="sidenavMode"
   >
-    My dynamic menu
+    <mat-toolbar color="primary">Examples</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/buttonIcon">Button icons</a>
+      <a mat-list-item routerLink="/formField">Form fields</a>
+      <a mat-list-item routerLink="/progressSpinner">Progress spinner</a>
+      <a mat-list-item routerLink="/tabs">Tabs</a>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="toolbar-menu" color="primary">
@@ -31,11 +37,9 @@
     <mat-toolbar class="toolbar-submenu" color="primary">
       <span>My App</span>
     </mat-toolbar>
-    <app-button-icons />
-    <hr><hr>
-    <app-form-fields />
+
+    <div class="content">
+    <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-
-<router-outlet></router-outlet>
